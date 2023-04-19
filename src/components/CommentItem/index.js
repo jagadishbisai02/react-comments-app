@@ -1,4 +1,5 @@
 import {formatDistanceToNow} from 'date-fns'
+
 import './index.css'
 
 const CommentItem = props => {

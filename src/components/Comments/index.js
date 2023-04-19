@@ -3,6 +3,8 @@ import {v4 as uuidv4} from 'uuid'
 
 import CommentItem from '../CommentItem'
 
+import './index.css'
+
 const initialContainerBackgroundClassNames = [
   'amber',
   'blue',
@@ -91,7 +93,7 @@ class Comments extends Component {
     return (
       <div className="app-container">
         <div className="comment-container">
-          <h1 className="app-heading">Comment</h1>
+          <h1 className="app-heading">Comments</h1>
           <div className="comment-inputs">
             <form className="form" onSubmit={this.onAddComment}>
               <p className="form-desc">Say something about 4.0 Technologies</p>
@@ -117,6 +119,7 @@ class Comments extends Component {
             <img
               src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
               alt="comments"
+              className="image"
             />
           </div>
           <hr className="line" />
@@ -124,7 +127,7 @@ class Comments extends Component {
             <span className="comments-count">{commentsList.length}</span>
             Comments
           </p>
-          <ul className="comments-list">{this.renderCommentsList}</ul>
+          <ul className="comments-list">{this.renderCommentsList()}</ul>
         </div>
       </div>
     )
